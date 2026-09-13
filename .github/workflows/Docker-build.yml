@@ -2,9 +2,9 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches: [ "main" ] # Запуск при пуше в ветку main
+    branches: [ "master" ] # Запуск при пуше в ветку main
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build-and-push:
