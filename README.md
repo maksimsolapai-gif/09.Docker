@@ -103,7 +103,7 @@ RUN pip install --no-cache-dir wheel && \
 # === STAGE 2: Runtime stage ===
 FROM python:3.10-slim AS runner
 WORKDIR /app
-# Копируем только зависимости из этапа сборки
+# Copy dependencies from Build
 COPY --from=builder /root/.local /root/.local
 COPY app.py .
 ENV PATH=/root/.local/bin:\$PATH
