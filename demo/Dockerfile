@@ -1,7 +1,5 @@
 FROM alpine:latest AS base
 
-LABEL maintainer="pluhin@gmail.com"
-
 RUN apk update \
     && apk add --no-cache wget \
     && mkdir /test
